@@ -6,7 +6,13 @@ def get_essential_items(loaded_json):
     excluded_folder_ids = get_excluded_folder_ids(loaded_json['folders'])
     essential_items = []
     for item in loaded_json['items']:
-        if (item.get('folderId') is None or item['folderId'] not in excluded_folder_ids) and item['type'] == 1 and item['login'].get('password') is not None and '•' not in item['login']['password']:
+        if (item.get('folderId') is None
+                or item['folderId'] not in excluded_folder_ids) \
+                and item['type'] == 1 \
+                and item['login'].get('password') is not None \
+                and '•' not in item['login']['password'] \
+                and item['login'].get('username') is not None \
+                and 'flosports' not in item['login']['username']:
             essential_item = [
                 item['name'],
                 item['login']['username'],
