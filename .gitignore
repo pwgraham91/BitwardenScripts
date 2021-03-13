@@ -132,4 +132,5 @@ dmypy.json
 .idea
 
 # Project-Specific
-bw.json
+*.json
+*.csv

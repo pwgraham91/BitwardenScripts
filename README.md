@@ -11,5 +11,5 @@ Scripts to manage Bitwarden passwords
 (this will ask for your master password)
 
 ### Script Usage
-with a bw.json file in the path, run one of the scripts:
+with a bw.json file in the path, run the script:
 `python3 essential_csv.py`
